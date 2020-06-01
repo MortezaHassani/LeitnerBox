@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="color"
+            type="Integer" />
+
+        <variable
+            name="context"
+            type="android.content.Context" />
+    </data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/card_activity_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_alignParentTop="true"
+            android:background="@{context.getColor(color)}"
+            android:elevation="2dp">
+
+            <ImageView
+                android:id="@+id/car_activity_close"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:onClick="closeActivity"
+                android:src="@drawable/ic_actions_close_simple" />
+
+            <TextView
+                android:id="@+id/card_activity_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Name of Card Group"
+                android:textColor="@android:color/white"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:id="@+id/card_activity_done"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@drawable/ic_actions_check_simple"
+                android:tint="@android:color/white" />
+
+            <ProgressBar
+                android:id="@+id/card_activity_done_loading"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:visibility="gone"
+                 />
+
+        </RelativeLayout>
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/card_activity_cards"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/card_activity_title_layout"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white" />
+
+        <!-- <FrameLayout
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:layout_below="@id/card_activity_title_layout"
+             android:layout_alignParentBottom="true"
+             android:background="@android:color/white">
+
+             <androidx.viewpager.widget.ViewPager
+                 android:id="@+id/card_activity_cards"
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent"
+                 android:background="@android:color/white" />
+
+            &lt;!&ndash; <RelativeLayout
+                 android:id="@+id/card_activity_button_layout"
+                 android:layout_width="match_parent"
+                 android:layout_height="70dp"
+                 android:layout_gravity="bottom"
+                 android:layout_marginBottom="50dp"
+                 android:background="@android:color/transparent">
+
+                <TextView
+                    android:id="@+id/oops_button"
+                    android:layout_width="80dp"
+                    android:layout_height="50dp"
+                    android:text="Oops!"
+                    android:gravity="center"
+                    android:textColor="@android:color/white"
+                    android:background="@color/oopsColor"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="20dp"
+                    />
+
+                 <TextView
+                     android:id="@+id/ok_button"
+                     android:layout_width="80dp"
+                     android:layout_height="50dp"
+                     android:text="Ok,got it!"
+                     android:gravity="center"
+                     android:textColor="@android:color/white"
+                     android:background="@color/okColor"
+                     android:layout_centerVertical="true"
+                     android:layout_alignParentEnd="true"
+                     android:layout_marginEnd="20dp"
+                     />
+
+             </RelativeLayout>&ndash;&gt;
+
+         </FrameLayout>-->
+
+
+    </RelativeLayout>
+</layout>

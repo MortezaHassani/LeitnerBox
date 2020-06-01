@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="main"
+            type="com.gwynbleidd.leitnerbox.views.activities.HomeActivity" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundGray"
+        >
+
+        <LinearLayout
+            android:id="@+id/navigation_bar"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentBottom="true"
+            android:background="@android:color/white"
+            android:baselineAligned="false"
+            android:elevation="4dp"
+            android:paddingTop="3dp"
+            android:orientation="horizontal"
+           >
+
+            <RelativeLayout
+                android:id="@+id/cards_icon"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:onClick='@{()->main.selectIcon("cardsIcon")}'>
+
+                <ImageView
+                    android:id="@+id/cards_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_actions_emultiple_edit"
+                    android:tint="@color/iconSelect" />
+
+                <TextView
+                    android:id="@+id/card_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/cards_image"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Flashcards"
+                    android:textColor="@color/iconSelect"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/stats_icon"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:onClick='@{()->main.selectIcon("statsIcon")}'>
+
+                <ImageView
+                    android:id="@+id/stats_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_statistics_circle_chart"
+                    android:tint="@color/iconUnSelect" />
+
+                <TextView
+                    android:id="@+id/stats_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/stats_image"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Stats"
+                    android:textColor="@color/iconUnSelect"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/fav_icon"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:onClick='@{()->main.selectIcon("favIcon")}'>
+
+                <ImageView
+                    android:id="@+id/fav_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_actions_heart"
+                    android:tint="@color/iconUnSelect" />
+
+                <TextView
+                    android:id="@+id/fav_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/fav_image"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Favourites"
+                    android:textColor="@color/iconUnSelect"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/settings_icon"
+                android:layout_width="0dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:onClick='@{()->main.selectIcon("settingsIcon")}'>
+
+                <ImageView
+                    android:id="@+id/settings_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="25dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_actions_settings"
+                    android:tint="@color/iconUnSelect" />
+
+                <TextView
+                    android:id="@+id/setting_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/settings_image"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center"
+                    android:text="Settings"
+                    android:textColor="@color/iconUnSelect"
+                    android:textSize="10sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/fragment_load"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/navigation_bar"
+            android:layout_alignParentTop="true"
+            >
+
+          <!--  <TextView
+                android:id="@+id/test"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:elevation="4dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/card_background"
+                android:text="foreground"
+                android:gravity="center"
+                android:textSize="30sp"
+                />-->
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+</layout>

@@ -3,4 +3,24 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="colorClick">#FFFFFF</color>
+
+    <color name="favButton">#ffffbb33</color>
+    <color name="startButton">#00574B</color>
+    <color name="settingButton">#D81B60</color>
+
+    <color name="backgroundGray">#ECECEC</color>
+    <color name="iconSelect">#003157</color>
+    <color name="iconUnSelect">#D1D1D1</color>
+
+    <color name="fontColor">#003157</color>
+
+    <color name="okColor">#80005723</color>
+    <color name="oopsColor">#80D81B60</color>
+
+    <color name="newGroup">#778AE6F3</color>
+
+
+
+
 </resources>
